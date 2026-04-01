@@ -36,8 +36,7 @@ EOF
   bundle exec rails spina:install <<EOF || true
 Spina Project
 default
-Admin
-admin@example.com
+admin@spina.com
 password
 EOF
 
