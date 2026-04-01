@@ -34,10 +34,10 @@ EOF
   bundle exec rails db:create
   bundle exec rails active_storage:install
   bundle exec rails spina:install <<EOF || true
-My Website
+Spina Project
 default
 Admin
-admin@spina.com
+admin@example.com
 password
 EOF
 
