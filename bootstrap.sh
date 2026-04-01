@@ -38,7 +38,7 @@ EOF
   bundle exec rails spina:install <<EOF
 My Website
 default
-admin@example.com
+admin@spina.com
 password
 EOF
 
