@@ -35,12 +35,12 @@ EOF
   bundle exec rails db:create
   bundle exec rails active_storage:install
 
-  bundle exec rails spina:install <<SPINA
+  bundle exec rails spina:install <<EOF
 My Website
 default
 admin@example.com
 password
-SPINA
+EOF
 
   bundle exec rails db:migrate
 
