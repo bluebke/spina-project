@@ -20,7 +20,7 @@ First boot takes ~2-3 minutes. The app is ready when you see `* Listening on htt
 | Site | http://127.0.0.1:3000 |
 | Admin | http://127.0.0.1:3000/admin |
 
-Default login: `admin@example.com` / `password`
+Default login: `admin@spina.com` / `password`
 
 ## Troubleshooting
 
