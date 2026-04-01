@@ -25,6 +25,7 @@ Default login: `admin@spina.com` / `password`
 ## Troubleshooting
 
 **Changes to bootstrap.sh aren't taking effect**
+
 The script is baked into the image at build time — rebuild after any edits:
 ```bash
 docker compose build && docker compose down -v && docker compose up
