@@ -2,9 +2,13 @@
 
 Local development environment for [Spina CMS](https://spinacms.com). Bootstraps automatically on first boot — no local Ruby, Rails, or PostgreSQL needed, just Docker.
 
+
 ## Prerequisites
 
+**NOTE: The Spina package is locked to version 2.20 to avoid potential issues from future versions with the input prompts during installation.**
+
 Docker Engine with the Compose plugin installed. [Docker Desktop](https://www.docker.com/products/docker-desktop/) (Mac/Windows) includes both. Linux users can follow the [Docker Engine install guide](https://docs.docker.com/engine/install/).
+
 
 ## Setup
 
@@ -21,6 +25,7 @@ First boot takes ~2-3 minutes. The app is ready when you see `* Listening on htt
 | Admin Page | http://127.0.0.1:3000/admin |
 
 Default login: `admin@spina.com` / `password`
+
 
 ## Troubleshooting
 
