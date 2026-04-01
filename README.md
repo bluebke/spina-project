@@ -1,4 +1,4 @@
-# Spina CMS — Docker Developer Environment
+# Spina CMS Dockerized
 
 Local development environment for [Spina CMS](https://spinacms.com). Bootstraps automatically on first boot — no local Ruby, Rails, or PostgreSQL needed, just Docker.
 
@@ -17,8 +17,8 @@ First boot takes ~2-3 minutes. The app is ready when you see `* Listening on htt
 
 | | URL |
 |--|--|
-| Site | http://127.0.0.1:3000 |
-| Admin | http://127.0.0.1:3000/admin |
+| Homepage | http://127.0.0.1:3000 |
+| Admin Page | http://127.0.0.1:3000/admin |
 
 Default login: `admin@spina.com` / `password`
 
