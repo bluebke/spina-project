@@ -4,7 +4,7 @@ set -e
 export RAILS_ENV=development
 BOOTSTRAP_FLAG="/app/.spina_bootstrapped"
 
-# Generate Rails app and install Spina
+# Generate Rails app and install Spina (first boot only)
 if [ ! -f "$BOOTSTRAP_FLAG" ]; then
   echo "==> Generating Rails app..."
   bundle exec rails new /app \
@@ -18,6 +18,7 @@ if [ ! -f "$BOOTSTRAP_FLAG" ]; then
 
   cd /app && bundle install
 
+  # Write database.yml AFTER rails new (which overwrites it)
   cat > /app/config/database.yml <<EOF
 default: &default
   adapter: postgresql
@@ -33,17 +34,21 @@ EOF
 
   bundle exec rails db:create
   bundle exec rails active_storage:install
-  bundle exec rails spina:install <<EOF || true
-Spina Project
+
+  bundle exec rails spina:install <<SPINA
+My Website
 default
-admin@spina.com
+admin@example.com
 password
-EOF
+SPINA
+
+  bundle exec rails db:migrate
 
   touch "$BOOTSTRAP_FLAG"
   echo ""
-  echo " Homepage: http://127.0.0.1:3000"
+  echo " Homepage:   http://127.0.0.1:3000"
   echo " Admin page: http://127.0.0.1:3000/admin"
+  echo " Login:      admin@example.com / password"
   echo ""
 fi
 

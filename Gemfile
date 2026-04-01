@@ -4,7 +4,7 @@ ruby "3.3.11"
 
 gem "rails", "~> 7.1"
 gem "pg"
-gem "spina"
+gem "spina", "~> 2.20"
 gem "puma", "~> 6.0"
-gem "bootsnap", require: false    # cache for quicker boot times
+gem "bootsnap", require: false
 gem "tzinfo-data", platforms: %i[windows jruby]
