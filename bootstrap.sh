@@ -18,7 +18,7 @@ if [ ! -f "$BOOTSTRAP_FLAG" ]; then
 
   cd /app && bundle install
 
-  # Write database.yml AFTER rails new (which overwrites it)
+  # Create database.yml after rails new (which overwrites it)
   cat > /app/config/database.yml <<EOF
 default: &default
   adapter: postgresql
