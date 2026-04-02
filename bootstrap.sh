@@ -48,7 +48,7 @@ EOF
   echo ""
   echo " Homepage:   http://127.0.0.1:3000"
   echo " Admin page: http://127.0.0.1:3000/admin"
-  echo " Login:      admin@example.com / password"
+  echo " Login:      admin@spina.com / password"
   echo ""
 fi
 
