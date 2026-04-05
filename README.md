@@ -43,5 +43,5 @@ docker compose down -v && docker compose build --no-cache && docker compose up
 
 **Check if admin user was created**
 ```bash
-docker compose exec -e RAILS_ENV=development web rails runner "puts Spina::User.all.map(&:email)"
+docker compose exec web rails runner "puts Spina::User.all.map(&:email)"
 ```
