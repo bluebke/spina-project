@@ -2,11 +2,15 @@
 set -e
 
 export RAILS_ENV=development
+
+echo "==> Installing gems"
+cd /app && bundle install
+
 BOOTSTRAP_FLAG="/app/.spina_bootstrapped"
 
 # Generate Rails app and install Spina (first boot only)
 if [ ! -f "$BOOTSTRAP_FLAG" ]; then
-  echo "==> Generating Rails app..."
+  echo "==> Generating Rails app"
   bundle exec rails new /app \
     --database=postgresql \
     --skip-git \

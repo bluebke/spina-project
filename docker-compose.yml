@@ -22,7 +22,7 @@ services:
       DATABASE_USER: postgres
     volumes:
       # mount app to host for editing
-      - app_data:/app
+      - ./app:/app
       # Keeps bundle cache across rebuilds
       - bundle_cache:/usr/local/bundle
     depends_on:
