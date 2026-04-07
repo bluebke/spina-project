@@ -33,5 +33,4 @@ services:
 
 volumes:
   postgres_data:
-  app_data:
   bundle_cache:

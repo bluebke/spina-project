@@ -7,3 +7,26 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+unless Spina::Account.exists?
+  puts 'Seeding Spina account'
+  account = Spina::Account.first_or_create
+  account.update(name: 'My Website', theme: 'default')
+
+  Spina::THEMES.clear
+  Dir[Rails.root.join("config", "initializers", "themes", "*.rb")].each { |file| load file }
+
+  account.save
+
+  puts 'Creating admin user'
+  unless Spina::User.exists?
+    Spina::User.create(
+      name: 'admin',
+      email: 'admin@spina.com',
+      password: 'password',
+      admin: true
+    )
+  end
+
+  puts 'Spina seeding was successful'
+end
